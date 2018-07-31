@@ -1,6 +1,7 @@
 namespace CarterAndMVC
 {
     using Carter;
+    using Carter.Razor;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.Extensions.DependencyInjection;
 
@@ -9,7 +10,8 @@ namespace CarterAndMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCarter();
-            services.AddMvcCore();
+            services.AddMvc();
+            services.AddRazor();
         }
 
         public void Configure(IApplicationBuilder app)

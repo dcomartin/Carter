@@ -8,6 +8,7 @@ namespace CarterSample
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Carter.Razor;
 
     public class Startup
     {
@@ -16,6 +17,7 @@ namespace CarterSample
             services.AddSingleton<IActorProvider, ActorProvider>();
 
             services.AddCarter();
+            services.AddRazor();
         }
 
         public void Configure(IApplicationBuilder app, IConfiguration config)
